@@ -1007,3 +1007,50 @@ html, body {
     display: none !important;
   }
 }
+
+/* ============================= */
+/* 🪟 FIX DEFINITIVO PRA SURFACE DUO */
+/* ============================= */
+
+/* Surface Duo aberto / landscape */
+@media (min-width: 540px) and (max-width: 900px) and (orientation: landscape) {
+
+  #hero {
+    min-height: 100dvh;
+    padding-top: 64px !important;
+    display: flex;
+    align-items: center;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+    text-align: center;
+    padding: 32px 0 28px !important;
+  }
+
+  .hero-title {
+    font-size: clamp(1.9rem, 4vw, 2.4rem);
+    line-height: 1.15;
+  }
+
+  .hero-sub {
+    max-width: 92%;
+    margin: 0 auto;
+    font-size: 0.95rem;
+  }
+
+  .hero-actions,
+  .hero-stats {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  /* Remove peso visual que empurra layout */
+  .hero-visual,
+  .hero-glow-1,
+  .hero-glow-2,
+  .hero-grid {
+    display: none !important;
+  }
+}
