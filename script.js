@@ -33,14 +33,13 @@
 
   /* ─── PORTFOLIO DATA ─── */
   const portfolioItems = [
-    { id: 1, title: 'SaaS Analytics Platform', category: 'Sistemas/Apps', tag: 'Sistema', desc: 'Dashboard em tempo real com IA integrada', bg: 'linear-gradient(135deg,#060D1E,#0A1830)', accent: '#00C8FF' },
-    { id: 2, title: 'Clínica Estética Pro', category: 'Landing Pages', tag: 'Landing', desc: 'Alta conversão com CTA otimizado', bg: 'linear-gradient(135deg,#0D0A1E,#1A0F2E)', accent: '#8B5CF6' },
-    { id: 3, title: 'Grupo Incorporadora', category: 'Sites Institucionais', tag: 'Institucional', desc: 'Presença corporativa premium', bg: 'linear-gradient(135deg,#061A10,#0A2818)', accent: '#10B981' },
-    { id: 4, title: 'Moda Urbana Store', category: 'E-commerce', tag: 'E-commerce', desc: 'Loja completa com 500+ produtos', bg: 'linear-gradient(135deg,#1A0E05,#2A1808)', accent: '#F59E0B' },
-    { id: 5, title: 'ERP Logística', category: 'Sistemas/Apps', tag: 'Sistema', desc: 'Gestão de frota e entregas em tempo real', bg: 'linear-gradient(135deg,#050F1C,#071424)', accent: '#00C8FF' },
-    { id: 6, title: 'Academia FitLife', category: 'Landing Pages', tag: 'Landing', desc: 'Captação de alunos automatizada', bg: 'linear-gradient(135deg,#1A0508,#280A0C)', accent: '#EF4444' },
-    { id: 7, title: 'Advocacia Menezes', category: 'Sites Institucionais', tag: 'Institucional', desc: 'Autoridade e confiança no ambiente digital', bg: 'linear-gradient(135deg,#12100A,#1C180E)', accent: '#D4AF37' },
-    { id: 8, title: 'Pet Shop Online', category: 'E-commerce', tag: 'E-commerce', desc: 'Agendamentos + loja virtual integrados', bg: 'linear-gradient(135deg,#061612,#0A201C)', accent: '#10B981' },
+    { id: 1, title: 'TEORAAGENDAMENTOS', category: 'Sistemas/Apps', tag: 'Sistema', desc: 'Prototipo de agendamentos para sua Barbearia ou salão', bg: 'linear-gradient(135deg,#060D1E,#0A1830)', accent: '#00C8FF' },
+    { id: 2, title: 'INBRACON BARRACÕES', category: 'Landing Pages', tag: 'Landing', desc: 'Alta conversão com CTA otimizado', bg: 'linear-gradient(135deg,#0D0A1E,#1A0F2E)', accent: '#8B5CF6' },
+    { id: 3, title: 'Solar Tech', category: 'Sites Institucionais', tag: 'Institucional', desc: 'Presença corporativa premium', bg: 'linear-gradient(135deg,#061A10,#0A2818)', accent: '#10B981' },
+    { id: 4, title: 'Zorraq', category: 'E-commerce', tag: 'E-commerce', desc: 'Loja completa com 20+ produtos', bg: 'linear-gradient(135deg,#1A0E05,#2A1808)', accent: '#F59E0B' },
+    { id: 6, title: 'Crianças Felizes', category: 'Landing Pages', tag: 'Landing', desc: 'Transformando o futuro das crianças através do amor e da educação', bg: 'linear-gradient(135deg,#1A0508,#280A0C)', accent: '#EF4444' },
+    { id: 7, title: 'Danilo Lima Advogados', category: 'Landing Pages', tag: 'Landing', desc: 'Soluções jurídicas seguras para proteger seus direitos e sua família. Advocacia com ética, transparência e agilidade. Mais de 18 anos de experiência lutando pelo que é justo para você.', bg: 'linear-gradient(135deg,#12100A,#1C180E)', accent: '#D4AF37' },
+    { id: 8, title: 'Gmartins Refrigeração', category: 'E-commerce', tag: 'E-commerce', desc: 'Agendamentos + loja virtual integrados', bg: 'linear-gradient(135deg,#061612,#0A201C)', accent: '#10B981' },
   ];
 
   function buildCard(item) {
