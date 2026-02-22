@@ -565,104 +565,143 @@
   overflow-x: hidden;
 }
 
-/* ───────────────── MOBILE AJUSTES GERAIS ───────────────── */
-@media (max-width: 768px) {
+/* ─────────────────────────────────────────────
+   🔥 CORREÇÕES GERAIS MOBILE
+───────────────────────────────────────────── */
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* ─────────────────────────────────────────────
+   📱 TABLET E CELULAR GRANDE
+───────────────────────────────────────────── */
+
+@media (max-width: 992px) {
+
+  /* NAVBAR */
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
 
   /* HERO */
-  #hero {
-    min-height: auto;
-    padding-top: 90px;
-  }
-
   .hero-content {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
     gap: 40px;
-    padding: 40px 0 60px;
     text-align: center;
-  }
-
-  .hero-sub {
-    margin-left: auto;
-    margin-right: auto;
   }
 
   .hero-actions {
     justify-content: center;
+    flex-wrap: wrap;
   }
 
   .hero-stats {
     justify-content: center;
-    gap: 20px;
+    flex-wrap: wrap;
   }
 
-  /* SECTIONS */
-  .section {
-    padding: 70px 0;
+  /* HERO VISUAL some no mobile */
+  .hero-visual {
+    display: none;
   }
 
-  .section-header {
-    margin-bottom: 40px;
-  }
-
-  /* PLANS */
+  /* PLANOS */
   .plans-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
+    gap: 24px;
   }
 
-  .plan-card {
-    padding: 26px 22px;
-  }
-
-  /* PORTFOLIO */
+  /* PORTFÓLIO */
   .port-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
   }
 
-  /* TEAM */
+  /* EQUIPE */
   .team-grid {
-    grid-template-columns: 1fr;
-  }
-
-  /* CTA */
-  .cta-title {
-    font-size: 1.8rem;
-    line-height: 1.2;
-  }
-
-  .cta-sub {
-    font-size: .95rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
   }
 
   /* FOOTER */
   .footer-inner {
     flex-direction: column;
-    gap: 30px;
+    gap: 24px;
     text-align: center;
-  }
-
-  .footer-contact {
-    align-items: center;
   }
 
 }
 
-/* ───────── EXTRA SMALL PHONES (até 480px) ───────── */
-@media (max-width: 480px) {
+/* ─────────────────────────────────────────────
+   📱 CELULAR MÉDIO
+───────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+
+  .container {
+    padding: 0 20px;
+  }
 
   .hero-title {
-    font-size: 2.2rem;
+    font-size: clamp(2rem, 6vw, 2.6rem);
+    line-height: 1.2;
+  }
+
+  .hero-sub {
+    font-size: .95rem;
+  }
+
+  .section-title {
+    font-size: clamp(1.6rem, 5vw, 2rem);
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+/* ─────────────────────────────────────────────
+   📱 CELULAR PEQUENO
+───────────────────────────────────────────── */
+
+@media (max-width: 480px) {
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
   }
 
   .btn-primary,
-  .btn-ghost {
+  .btn-ghost,
+  .plan-btn {
     width: 100%;
     justify-content: center;
   }
 
-  .plan-price .amount {
-    font-size: 2.1rem;
+  .hero-stats {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .cta-title {
+    font-size: 1.6rem;
+    line-height: 1.25;
   }
 
 }
-
-
