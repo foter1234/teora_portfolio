@@ -34,11 +34,11 @@
   /* ─── PORTFOLIO DATA ─── */
   const portfolioItems = [
     { id: 1, title: 'Teora Agendamentos', category: 'Sistemas/Apps', tag: 'Sistema', desc: 'Prototipo de agendamentos para sua Barbearia ou salão', bg: 'linear-gradient(135deg,#060D1E,#0A1830)', accent: '#00C8FF' },
-    { id: 2, title: 'INBRACON BARRACÕES', category: 'Landing Pages', tag: 'Landing', desc: 'Estruturas Inteligentes para Seu Negócio. Projete a colheita e ganhe espaço com engenharia Inbracon', bg: 'linear-gradient(135deg,#0D0A1E,#1A0F2E)', accent: '#8B5CF6' },
+    { id: 2, title: 'Inbracon', category: 'Landing Pages', tag: 'Landing', desc: 'Estruturas Inteligentes para Seu Negócio. Projete a colheita e ganhe espaço com engenharia Inbracon', bg: 'linear-gradient(135deg,#0D0A1E,#1A0F2E)', accent: '#8B5CF6' },
     { id: 3, title: 'Solar Tech', category: 'Sites Institucionais', tag: 'Institucional', desc: 'Pare de pagar pela energia. Gere a sua.', bg: 'linear-gradient(135deg,#061A10,#0A2818)', accent: '#10B981' },
     { id: 4, title: 'Zorraq', category: 'E-commerce', tag: 'E-commerce', desc: 'Loja completa com 20+ produtos', bg: 'linear-gradient(135deg,#1A0E05,#2A1808)', accent: '#F59E0B' },
     { id: 5, title: 'Crianças Felizes', category: 'Landing Pages', tag: 'Landing', desc: 'Transformando o futuro das crianças através do amor e da educação', bg: 'linear-gradient(135deg,#1A0508,#280A0C)', accent: '#EF4444' },
-    { id: 6, title: 'Danilo Lima Advogados', category: 'Landing Pages', tag: 'Landing', desc: 'Soluções jurídicas seguras para proteger seus direitos e sua família. Advocacia com ética, transparência e agilidade. Mais de 18 anos de experiência lutando pelo que é justo para você.', bg: 'linear-gradient(135deg,#12100A,#1C180E)', accent: '#D4AF37' },
+    { id: 6, title: 'Danilo Lima Advogados', category: 'Landing Pages', tag: 'Landing', desc: 'Soluções jurídicas seguras para proteger seus direitos e sua família.', bg: 'linear-gradient(135deg,#12100A,#1C180E)', accent: '#D4AF37' },
     { id: 7, title: 'Gmartins Refrigeração', category: 'E-commerce', tag: 'E-commerce', desc: 'Agendamentos + loja virtual integrados', bg: 'linear-gradient(135deg,#061612,#0A201C)', accent: '#10B981' },
   ];
 
