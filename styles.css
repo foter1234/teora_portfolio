@@ -782,3 +782,42 @@ html, body {
    🔥 RESPONSIVE PATCH — MOBILE & TABLET (ADD ONLY)
    NÃO REMOVE NADA DO SEU CSS
 ===================================================== */
+
+/* =====================================================
+   🚑 HERO OVERFLOW HARD FIX (mobile safe)
+===================================================== */
+
+/* impede grid de estourar largura */
+.hero-content {
+  width: 100%;
+  max-width: 100%;
+}
+
+.hero-content > * {
+  min-width: 0;
+}
+
+/* garante que textos quebrem corretamente */
+.hero-title,
+.hero-sub {
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* proteção extra do container */
+.container {
+  width: 100%;
+  max-width: 1160px;
+}
+
+/* iOS SAFETY (muito importante) */
+#hero {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* evita qualquer filho absoluto causar scroll */
+#hero * {
+  max-width: 100%;
+}
