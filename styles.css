@@ -841,3 +841,11 @@ html, body {
     min-height: 100%;
   }
 }
+
+
+@media (max-width: 1100px) {
+  .hero-video-bg {
+    object-fit: contain !important;  /* MOSTRA O VÍDEO INTEIRO */
+    background: #05070F;             /* cor de fundo se sobrar espaço */
+  }
+}
