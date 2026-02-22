@@ -760,3 +760,99 @@ html, body {
   z-index: 2;
 }
 
+/* IMAGEM COMO FUNDO DO CARD */
+.port-bg {
+  position: absolute;
+  inset: 12px; /* cria a borda visível */
+  background-size: cover;
+  background-position: top center;
+  border-radius: 12px;
+  z-index: 0;
+  opacity: 0.65;
+  transition: transform .6s ease, opacity .4s ease;
+}
+@media (max-width: 768px) {
+  .port-bg {
+    inset: 14px;                   /* menos borda */
+    background-position: center top;
+    transform: scale(1.01);       /* quase sem zoom pra não cortar */
+  }
+}
+
+/* 📲 Dobráveis (Galaxy Z Fold / Surface Duo abertos) */
+@media (min-width: 600px) and (max-width: 900px) {
+  .port-bg {
+    background-position: center center; /* enquadra melhor em telas “quadradas” */
+  }
+}
+
+/* 🖥️ Telas grandes */
+@media (min-width: 1200px) {
+  .port-bg {
+    inset: 14px;
+    transform: scale(1.05);
+  }
+}
+
+/* escurece levemente pra texto ficar legível */
+.port-inner::before {
+  content: "";
+  position: absolute;
+  inset: 14px;
+  border-radius: 12px;
+  background: linear-gradient(
+    to top,
+    rgba(5,7,15,.85) 25%,
+    rgba(5,7,15,.45) 55%,
+    rgba(5,7,15,.15) 100%
+  );
+  z-index: 1;
+}
+
+/* texto e elementos acima da imagem */
+.port-top,
+.port-bottom,
+.port-hover-arrow {
+  position: relative;
+  z-index: 2;
+}
+
+/* hover elegante */
+.port-card:hover .port-bg {
+  transform: scale(1.04);
+  opacity: 0.95;
+}
+
+/* FIX POSIÇÃO DA SETA NO CARD DO PORTFÓLIO */
+.port-inner {
+  position: relative;
+}
+
+.port-hover-arrow {
+  position: absolute !important;
+  right: 16px !important;
+  bottom: 16px !important;
+  top: auto !important;
+  left: auto !important;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+
+  background: rgba(22, 45, 114, 0.65);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+
+  z-index: 3;
+}
+
+@media (max-width: 768px) {
+  .port-hover-arrow {
+    right: 12px !important;
+    bottom: 12px !important;
+    width: 40px;
+    height: 40px;
+  }
+}
