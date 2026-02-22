@@ -883,3 +883,81 @@ html, body {
     justify-content: center;
   }
 }
+
+/* ============================= */
+/* 🎯 FIX REAL PARA TABLET, FOLD E HUB */
+/* ============================= */
+
+/* Unifica breakpoint de layout do HERO */
+@media (max-width: 1100px) {
+
+  #hero {
+    min-height: 100dvh; /* viewport real (fixa fold, duo, tablets) */
+    padding-top: 70px; /* mantém só o navbar */
+    display: flex;
+    align-items: center;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+    text-align: center;
+    padding: 40px 0 32px !important;
+  }
+
+  .hero-sub {
+    max-width: 92%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-actions,
+  .hero-stats {
+    justify-content: center;
+  }
+
+  /* Limpa ruído visual em telas médias */
+  .hero-glow-1,
+  .hero-glow-2 {
+    opacity: 0.35;
+    filter: blur(40px);
+  }
+
+  .hero-grid {
+    opacity: 0.08;
+  }
+
+  /* Garante que nada empurre o layout */
+  .hero-visual {
+    display: none !important;
+  }
+}
+
+/* ============================= */
+/* 📱 CORREÇÃO PARA FOLDABLES ABERTOS */
+/* ============================= */
+@media (min-width: 600px) and (max-width: 900px) and (orientation: landscape) {
+
+  #hero {
+    min-height: 100dvh;
+  }
+
+  .hero-title {
+    font-size: clamp(2.1rem, 4.2vw, 2.8rem);
+    line-height: 1.15;
+  }
+
+  .hero-sub {
+    font-size: 1rem;
+  }
+}
+
+/* ============================= */
+/* 🧹 REMOVE SOMA DE SAFE-AREA EM TABLET */
+/* ============================= */
+@media (min-width: 768px) {
+
+  #hero {
+    padding-top: 70px !important; /* ignora safe-area */
+  }
+}
