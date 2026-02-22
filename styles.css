@@ -624,38 +624,3 @@ html, body {
   }
 
 }
-
-/* ─────────────────────────────────────────────
-   📱 CELULAR PEQUENO
-───────────────────────────────────────────── */
-
-@media (max-width: 480px) {
-
-  .container {
-    padding: 0 16px;
-  }
-
-  .hero-actions {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 12px;
-  }
-
-  .btn-primary,
-  .btn-ghost,
-  .plan-btn {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .hero-stats {
-    flex-direction: column;
-    gap: 14px;
-  }
-
-  .cta-title {
-    font-size: 1.6rem;
-    line-height: 1.25;
-  }
-
-}
