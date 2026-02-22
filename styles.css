@@ -624,3 +624,123 @@ html, body {
   }
 
 }
+
+
+/* ============================= */
+/* HERO VIDEO - SAFE VERSION */
+/* ============================= */
+
+.hero-video-bg {
+  display: none;
+}
+
+/* ============================= */
+/* MOBILE & TABLET ONLY */
+/* ============================= */
+
+@media (max-width: 1024px) {
+
+  /* ===== HERO STRUCTURE ===== */
+
+  #hero {
+    position: relative;
+    overflow: hidden;
+    min-height: 100svh;
+  }
+
+  .hero-video-bg {
+    display: block;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0.35;
+    pointer-events: none;
+  }
+
+  /* overlay escuro para contraste */
+  #hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(5,7,15,0.85),
+      rgba(5,7,15,0.92)
+    );
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  /* garantir conteúdo acima do vídeo */
+  #hero .container,
+  #hero .hero-grid,
+  #hero .hero-glow-1,
+  #hero .hero-glow-2 {
+    position: relative;
+    z-index: 2;
+  }
+
+  /* ===== HERO LAYOUT FIX ===== */
+
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    text-align: center;
+  }
+
+  .hero-visual {
+    display: none; /* mantém limpo no mobile */
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 6vw, 2.6rem);
+    line-height: 1.2;
+  }
+
+  .hero-sub {
+    font-size: 0.95rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-stats {
+    justify-content: center;
+    gap: 18px;
+  }
+
+  /* ===== DESATIVAR CURSOR CUSTOM ===== */
+
+  body {
+    cursor: auto;
+  }
+
+  #cursor-dot,
+  #cursor-ring {
+    display: none;
+  }
+}
+
+/* EXTRA SMALL PHONES */
+
+@media (max-width: 480px) {
+
+  .hero-title {
+    font-size: 1.9rem;
+  }
+
+  .hero-sub {
+    font-size: 0.9rem;
+  }
+
+  .plan-card {
+    padding: 22px;
+  }
+
+}
