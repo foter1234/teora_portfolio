@@ -1061,3 +1061,36 @@ html, body {
     overflow-x: hidden !important;
   }
 }
+
+/* ============================= */
+/* 📱 FIX FINO – IPHONE GRANDE & GALAXY ULTRA */
+/* Apenas centraliza texto e botões do HERO */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+  /* Centraliza visualmente o bloco do texto */
+  #hero .hero-content {
+    text-align: center !important;
+    justify-items: center;
+  }
+
+  /* Centraliza título e subtítulo */
+  #hero .hero-title,
+  #hero .hero-sub {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Centraliza os botões */
+  #hero .hero-actions {
+    justify-content: center !important;
+    width: 100%;
+  }
+
+  #hero .hero-actions > * {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
