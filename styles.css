@@ -744,3 +744,36 @@ html, body {
   }
 
 }
+
+/* ===== FIX TITULO DESKTOP ===== */
+
+@media (min-width: 1025px) {
+
+  .hero-title {
+    line-height: 1.08; /* evita letras coladas */
+    letter-spacing: -0.02em;
+    word-break: normal;
+    overflow-wrap: break-word;
+  }
+
+  .hero-title span,
+  .hero-title strong {
+    display: inline;
+  }
+
+}
+
+/* ===== AUMENTAR LOGO TEORA DESKTOP ===== */
+
+@media (min-width: 1025px) {
+
+  .hero-visual {
+    transform: scale(1.15); /* aumenta o bloco todo */
+  }
+
+  .hero-visual img {
+    width: clamp(260px, 32vw, 420px);
+    max-width: none;
+  }
+
+}
