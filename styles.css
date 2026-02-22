@@ -20,6 +20,17 @@
     overflow-x: hidden;
     cursor: none;
   }
+  @media (hover: none) and (pointer: coarse) {
+  body {
+    cursor: auto;
+  }
+
+  #cursor-dot,
+  #cursor-ring {
+    display: none;
+  }
+}
+
   ::selection { background: rgba(0,200,255,.25); color: var(--blue); }
   ::-webkit-scrollbar { width: 3px; }
   ::-webkit-scrollbar-track { background: var(--bg); }
@@ -68,6 +79,11 @@
 
   /* ─── UTILITIES ─── */
   .container { max-width: 1160px; margin: 0 auto; padding: 0 28px; position: relative; z-index: 1; }
+  @media (max-width: 480px) {
+  .container {
+    padding: 0 18px;
+  }
+}
   .badge {
     display: inline-flex; align-items: center; gap: 6px;
     background: rgba(0,200,255,.1); color: var(--blue);
@@ -226,10 +242,16 @@
     display: grid; grid-template-columns: 1fr 1fr; gap: 60px;
     align-items: center; padding: 100px 0 80px;
   }
-  @media (max-width: 900px) {
-    .hero-content { grid-template-columns: 1fr; padding: 60px 0; }
-    .hero-visual { display: none; }
+ @media (max-width: 992px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+    padding: 60px 0;
   }
+
+  .hero-visual {
+    display: none;
+  }
+}
   .hero-eyebrow { animation: fadeUp .6s ease forwards; }
   .hero-title {
     font-size: clamp(2.6rem, 5.5vw, 4.2rem);
@@ -302,6 +324,19 @@
   .section-alt { background: var(--bg2); }
   .section-header { text-align: center; margin-bottom: 60px; }
   .section-header .section-sub { max-width: 480px; margin: 10px auto 0; }
+
+
+  img {
+  max-width: 100%;
+  height: auto;
+}
+
+.orbit-wrap,
+.center-logo img {
+  max-width: 100%;
+}
+
+
 
   /* ─── PLANS ─── */
   .plans-grid {
@@ -524,3 +559,8 @@
     .footer-contact { align-items: center; }
     .hero-actions { justify-content: flex-start; }
   }
+
+  html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
