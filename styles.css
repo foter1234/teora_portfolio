@@ -575,7 +575,7 @@ img {
 }
 
 html, body {
-  max-width: 90%;
+  max-width: 100%;
   overflow-x: hidden;
 }
 
