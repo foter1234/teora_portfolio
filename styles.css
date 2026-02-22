@@ -749,3 +749,13 @@ html, body {
     z-index: 3;
   }
 }
+
+/* 🔓 Libera clique no botão "Contratar" dos planos */
+.plan-card::before {
+  pointer-events: none;
+}
+
+.plan-btn {
+  position: relative;
+  z-index: 2;
+}
