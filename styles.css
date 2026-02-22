@@ -1063,11 +1063,11 @@ html, body {
 }
 
 /* ============================= */
-/* 📱 FIX FINO – IPHONE GRANDE & GALAXY ULTRA */
-/* Apenas centraliza texto e botões do HERO */
+/* 📱 FIX FINO – CELULARES GRANDES (iPhone Pro Max / Galaxy Ultra) */
+/* Centraliza texto e botões do HERO */
 /* ============================= */
 
-@media (max-width: 768px) {
+@media (max-width: 900px) and (orientation: portrait) {
 
   /* Centraliza visualmente o bloco do texto */
   #hero .hero-content {
@@ -1092,5 +1092,11 @@ html, body {
   #hero .hero-actions > * {
     margin-left: auto;
     margin-right: auto;
+  }
+
+  /* Evita "sensação" de desalinhado por padding do container */
+  #hero .container {
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }
