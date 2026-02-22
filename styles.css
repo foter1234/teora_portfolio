@@ -783,11 +783,7 @@ html, body {
    NÃO REMOVE NADA DO SEU CSS
 ===================================================== */
 
-/* evita overflow fantasma em qualquer tela */
-html, body {
-  max-width: 100%;
-  overflow-x: hidden;
-}
+
 
 /* mídias nunca estouram */
 img, video, canvas, svg {
