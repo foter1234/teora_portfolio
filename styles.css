@@ -705,3 +705,104 @@ html, body {
   }
 
 }
+
+
+/* ───────────────── MOBILE AJUSTES GERAIS ───────────────── */
+@media (max-width: 768px) {
+
+  /* HERO */
+  #hero {
+    min-height: auto;
+    padding-top: 90px;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 40px 0 60px;
+    text-align: center;
+  }
+
+  .hero-sub {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-stats {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  /* SECTIONS */
+  .section {
+    padding: 70px 0;
+  }
+
+  .section-header {
+    margin-bottom: 40px;
+  }
+
+  /* PLANS */
+  .plans-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .plan-card {
+    padding: 26px 22px;
+  }
+
+  /* PORTFOLIO */
+  .port-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* TEAM */
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* CTA */
+  .cta-title {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+
+  .cta-sub {
+    font-size: .95rem;
+  }
+
+  /* FOOTER */
+  .footer-inner {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .footer-contact {
+    align-items: center;
+  }
+
+}
+
+/* ───────── EXTRA SMALL PHONES (até 480px) ───────── */
+@media (max-width: 480px) {
+
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .btn-primary,
+  .btn-ghost {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .plan-price .amount {
+    font-size: 2.1rem;
+  }
+
+}
