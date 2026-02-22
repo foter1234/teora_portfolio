@@ -305,7 +305,7 @@
   }
   @keyframes counter-spin { to { transform: translate(-50%,-50%) rotate(-360deg); } }
   @keyframes float { 0%,100% { transform: translate(-50%,-50%) translateY(0) rotate(0deg); } 50% { transform: translate(-50%,-50%) translateY(-10px) rotate(0deg); } }
-  .center-logo img { width: 480px; height: 480px; object-fit: contain; filter: drop-shadow(0 0 40px rgba(0,200,255,.5)); }
+  .center-logo img { width: 680px; height: 680px; object-fit: contain; filter: drop-shadow(0 0 40px rgba(0,200,255,.5)); }
   .floating-tag {
     position: absolute; background: rgba(12,17,32,.9);
     border: 1px solid var(--border); border-radius: 10px;
