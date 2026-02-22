@@ -961,3 +961,49 @@ html, body {
     padding-top: 70px !important; /* ignora safe-area */
   }
 }
+
+
+/* ============================= */
+/* 🍎 FIX DEFINITIVO PRA iPAD */
+/* ============================= */
+
+@media (min-width: 768px) and (max-width: 1180px) {
+
+  #hero {
+    min-height: 100dvh;
+    padding-top: 70px !important; /* evita somar safe-area */
+    display: flex;
+    align-items: center;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+    text-align: center;
+    padding: 48px 0 36px !important;
+  }
+
+  .hero-title {
+    font-size: clamp(2.2rem, 4vw, 3rem);
+    line-height: 1.15;
+  }
+
+  .hero-sub {
+    max-width: 90%;
+    margin: 0 auto;
+    font-size: 1rem;
+  }
+
+  .hero-actions,
+  .hero-stats {
+    justify-content: center;
+  }
+
+  /* Limpa bagunça visual que empurra layout */
+  .hero-visual,
+  .hero-glow-1,
+  .hero-glow-2,
+  .hero-grid {
+    display: none !important;
+  }
+}
