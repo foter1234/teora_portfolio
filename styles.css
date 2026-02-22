@@ -1054,3 +1054,55 @@ html, body {
     display: none !important;
   }
 }
+
+/* ============================= */
+/* 📂 FIX DEFINITIVO GALAXY Z FOLD 5 */
+/* ============================= */
+
+/* Galaxy Z Fold 5 aberto (landscape) */
+@media (min-width: 673px) and (max-width: 906px) and (orientation: landscape) {
+
+  #hero {
+    min-height: 100dvh;
+    padding-top: 64px !important;
+    display: flex;
+    align-items: center;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+    text-align: center;
+    padding: 28px 0 24px !important;
+  }
+
+  .hero-title {
+    font-size: clamp(1.8rem, 3.6vw, 2.3rem);
+    line-height: 1.15;
+  }
+
+  .hero-sub {
+    max-width: 90%;
+    margin: 0 auto;
+    font-size: 0.95rem;
+  }
+
+  .hero-actions,
+  .hero-stats {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  /* Mata tudo que empurra o layout pra fora da tela */
+  .hero-visual,
+  .hero-grid,
+  .hero-glow-1,
+  .hero-glow-2 {
+    display: none !important;
+  }
+
+  /* Garante que nada vaze horizontal */
+  html, body, #hero {
+    overflow-x: hidden !important;
+  }
+}
