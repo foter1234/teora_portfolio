@@ -856,3 +856,49 @@ html, body {
     height: 40px;
   }
 }
+
+
+/* ============================= */
+/* 📱 WHATSAPP FLUTUANTE (SÓ MOBILE) */
+/* ============================= */
+
+.whatsapp-float {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00C8FF, #2563EB); /* azul do tema */
+  display: none; /* só aparece no mobile */
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  z-index: 9999;
+  box-shadow: 0 10px 30px rgba(0, 140, 255, 0.35);
+  transition: transform .25s ease, box-shadow .25s ease, opacity .25s ease;
+  opacity: .95;
+}
+
+.whatsapp-float svg {
+  width: 28px;
+  height: 28px;
+}
+
+.whatsapp-float:active {
+  transform: scale(0.92);
+}
+
+/* Só aparece em telas pequenas (mobile) */
+@media (max-width: 768px) {
+  .whatsapp-float {
+    display: flex;
+  }
+}
+
+/* Evita conflito com iPhone (barra inferior) */
+@supports (padding: max(0px)) {
+  .whatsapp-float {
+    bottom: calc(16px + env(safe-area-inset-bottom));
+  }
+}
