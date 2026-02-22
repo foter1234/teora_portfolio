@@ -515,7 +515,6 @@
     .footer-inner { flex-direction: column; text-align: center; }
     .social-row { justify-content: center; }
     .footer-contact { align-items: center; }
-    .hero-actions { justify-content: flex-start; }
   }
 
   
@@ -548,27 +547,7 @@ html, body {
     display: block;
   }
 
-  /* HERO */
-  .hero-content {
-    grid-template-columns: 1fr !important;
-    gap: 40px;
-    text-align: center;
-  }
 
-  .hero-actions {
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .hero-stats {
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  /* HERO VISUAL some no mobile */
-  .hero-visual {
-    display: none;
-  }
 
   /* PLANOS */
   .plans-grid {
@@ -606,15 +585,6 @@ html, body {
     padding: 0 20px;
   }
 
-  .hero-title {
-    font-size: clamp(2rem, 6vw, 2.6rem);
-    line-height: 1.2;
-  }
-
-  .hero-sub {
-    font-size: .95rem;
-  }
-
   .section-title {
     font-size: clamp(1.6rem, 5vw, 2rem);
   }
@@ -640,80 +610,7 @@ html, body {
 
 @media (max-width: 1024px) {
 
-  /* ===== HERO STRUCTURE ===== */
 
-  #hero {
-    position: relative;
-    overflow: hidden;
-    min-height: 100svh;
-  }
-
-  .hero-video-bg {
-    display: block;
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 0;
-    opacity: 0.35;
-    pointer-events: none;
-  }
-
-  /* overlay escuro para contraste */
-  #hero::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-      to bottom,
-      rgba(5,7,15,0.85),
-      rgba(5,7,15,0.92)
-    );
-    z-index: 1;
-    pointer-events: none;
-  }
-
-  /* garantir conteúdo acima do vídeo */
-  #hero .container,
-  #hero .hero-grid,
-  #hero .hero-glow-1,
-  #hero .hero-glow-2 {
-    position: relative;
-    z-index: 2;
-  }
-
-  /* ===== HERO LAYOUT FIX ===== */
-
-  .hero-content {
-    grid-template-columns: 1fr;
-    gap: 32px;
-    text-align: center;
-  }
-
-  .hero-visual {
-    display: none; /* mantém limpo no mobile */
-  }
-
-  .hero-title {
-    font-size: clamp(2rem, 6vw, 2.6rem);
-    line-height: 1.2;
-  }
-
-  .hero-sub {
-    font-size: 0.95rem;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .hero-actions {
-    justify-content: center;
-  }
-
-  .hero-stats {
-    justify-content: center;
-    gap: 18px;
-  }
 
   /* ===== DESATIVAR CURSOR CUSTOM ===== */
 
@@ -731,275 +628,89 @@ html, body {
 
 @media (max-width: 480px) {
 
-  .hero-title {
-    font-size: 1.9rem;
-  }
-
-  .hero-sub {
-    font-size: 0.9rem;
-  }
-
   .plan-card {
     padding: 22px;
   }
 
 }
 
-/* ===== FIX TITULO DESKTOP ===== */
-
-@media (min-width: 1025px) {
-
-  .hero-title {
-    line-height: 1.08; /* evita letras coladas */
-    letter-spacing: -0.02em;
-    word-break: normal;
-    overflow-wrap: break-word;
-  }
-
-  .hero-title span,
-  .hero-title strong {
-    display: inline;
-  }
-
-}
-
-/* ===== AUMENTAR LOGO TEORA DESKTOP ===== */
-
-@media (min-width: 1025px) {
-
-  .hero-visual {
-    transform: scale(1.15); /* aumenta o bloco todo */
-  }
-
-  .hero-visual img {
-    width: clamp(260px, 32vw, 420px);
-    max-width: none;
-  }
-}
-
 /* ============================= */
-/* 🔥 FIX DEFINITIVO HERO RESPONSIVO */
+/* 🎯 HERO RESPONSIVO DEFINITIVO */
+/* Mobile, Tablet, Fold, Duo    */
 /* ============================= */
 
-/* Evita estouro horizontal do hero */
 #hero {
   width: 100%;
+  min-height: 100vh;
   overflow: hidden;
+  display: flex;
+  align-items: center;
 }
 
-/* Visual do hero fluido */
-.orbit-wrap {
-  width: clamp(220px, 60vw, 380px);
-  height: clamp(220px, 60vw, 380px);
-}
-
-.center-logo img {
-  width: clamp(180px, 55vw, 420px);
-  height: auto;
-}
-
-/* Evita elementos saírem da tela */
-.floating-tag {
-  max-width: 70vw;
-  white-space: normal;
-  text-align: center;
-}
-
-/* Z-INDEX CORRETO DO HERO */
-.hero-video-bg {
-  z-index: 0;
-}
-
-#hero::after {
-  z-index: 1;
-}
-
-.hero-grid,
-.hero-glow-1,
-.hero-glow-2 {
-  z-index: 1;
-}
-
-#hero .container {
-  position: relative;
-  z-index: 2;
-}
-
-/* Unifica comportamento mobile/tablet */
-@media (max-width: 1024px) {
-
-  #hero {
-    min-height: 100svh;
-    padding-top: env(safe-area-inset-top);
-  }
-
-  .hero-content {
-    grid-template-columns: 1fr !important;
-    gap: 28px;
-    text-align: center;
-    padding: 48px 0 40px;
-  }
-
-  .hero-title {
-    font-size: clamp(1.9rem, 6vw, 2.6rem);
-    line-height: 1.2;
-  }
-
-  .hero-sub {
-    max-width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .hero-stats {
-    justify-content: center;
-    gap: 16px;
-  }
-
-  .hero-visual {
-    display: none !important;
-  }
-}
-
-/* Mobile pequeno */
-@media (max-width: 480px) {
-
-  .hero-title {
-    font-size: 1.7rem;
-  }
-
-  .hero-sub {
-    font-size: 0.9rem;
-  }
-
-  .hero-actions {
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .btn-primary,
-  .btn-ghost {
-    width: 100%;
-    justify-content: center;
-  }
-}
-
-/* ============================= */
-/* 🎯 FIX REAL PARA TABLET, FOLD E HUB */
-/* ============================= */
-
-/* Unifica breakpoint de layout do HERO */
+/* Mobile + Tablet + Fold */
 @media (max-width: 1100px) {
 
   #hero {
-    min-height: 100dvh; /* viewport real (fixa fold, duo, tablets) */
-    padding-top: 70px; /* mantém só o navbar */
-    display: flex;
-    align-items: center;
+    min-height: 100dvh;
+    padding-top: 72px; /* altura do navbar */
+    text-align: center;
+  }
+
+  .hero-video-bg {
+    display: block;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.35;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  #hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(5,7,15,0.85),
+      rgba(5,7,15,0.92)
+    );
+    z-index: 1;
   }
 
   .hero-content {
+    display: grid;
     grid-template-columns: 1fr !important;
-    gap: 28px !important;
+    gap: 28px;
     text-align: center;
-    padding: 40px 0 32px !important;
+    align-items: center;
+    justify-items: center;
+    padding: 48px 0 40px;
+  }
+
+  .hero-title,
+  .hero-sub {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
   }
 
   .hero-sub {
     max-width: 92%;
-    margin-left: auto;
-    margin-right: auto;
+    font-size: 0.95rem;
   }
 
   .hero-actions,
   .hero-stats {
-    justify-content: center;
-  }
-
-  /* Limpa ruído visual em telas médias */
-  .hero-glow-1,
-  .hero-glow-2 {
-    opacity: 0.35;
-    filter: blur(40px);
-  }
-
-  .hero-grid {
-    opacity: 0.08;
-  }
-
-  /* Garante que nada empurre o layout */
-  .hero-visual {
-    display: none !important;
-  }
-}
-
-/* ============================= */
-/* 📱 CORREÇÃO PARA FOLDABLES ABERTOS */
-/* ============================= */
-@media (min-width: 600px) and (max-width: 900px) and (orientation: landscape) {
-
-  #hero {
-    min-height: 100dvh;
-  }
-
-  .hero-title {
-    font-size: clamp(2.1rem, 4.2vw, 2.8rem);
-    line-height: 1.15;
-  }
-
-  .hero-sub {
-    font-size: 1rem;
-  }
-}
-
-/* ============================= */
-/* 🧹 REMOVE SOMA DE SAFE-AREA EM TABLET */
-/* ============================= */
-@media (min-width: 768px) {
-
-  #hero {
-    padding-top: 70px !important; /* ignora safe-area */
-  }
-}
-
-
-/* ============================= */
-/* 🍎 FIX DEFINITIVO PRA iPAD */
-/* ============================= */
-
-@media (min-width: 768px) and (max-width: 1180px) {
-
-  #hero {
-    min-height: 100dvh;
-    padding-top: 70px !important; /* evita somar safe-area */
+    width: 100%;
     display: flex;
-    align-items: center;
-  }
-
-  .hero-content {
-    grid-template-columns: 1fr !important;
-    gap: 28px !important;
-    text-align: center;
-    padding: 48px 0 36px !important;
-  }
-
-  .hero-title {
-    font-size: clamp(2.2rem, 4vw, 3rem);
-    line-height: 1.15;
-  }
-
-  .hero-sub {
-    max-width: 90%;
-    margin: 0 auto;
-    font-size: 1rem;
-  }
-
-  .hero-actions,
-  .hero-stats {
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
   }
 
-  /* Limpa bagunça visual que empurra layout */
   .hero-visual,
   .hero-glow-1,
   .hero-glow-2,
@@ -1008,95 +719,25 @@ html, body {
   }
 }
 
-/* ============================= */
-/* 🧠 FIX UNIVERSAL – DOBRÁVEIS (Fold + Duo) */
-/* ============================= */
-
-/* Zona híbrida de dobráveis abertos (landscape) */
-@media (min-width: 540px) and (max-width: 920px) and (orientation: landscape) {
-
-  /* HERO */
-  #hero {
-    min-height: 100dvh;
-    padding-top: 64px !important;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-  }
-
-  .hero-content {
-    grid-template-columns: 1fr !important;
-    gap: 24px !important;
-    text-align: center;
-    padding: 32px 0 28px !important;
-  }
+/* Ajuste fino celulares pequenos */
+@media (max-width: 480px) {
 
   .hero-title {
-    font-size: clamp(1.9rem, 3.8vw, 2.4rem);
+    font-size: 1.7rem;
     line-height: 1.15;
   }
 
   .hero-sub {
-    max-width: 92%;
-    margin: 0 auto;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
 
-  .hero-actions,
-  .hero-stats {
-    justify-content: center;
-    gap: 12px;
+  .hero-actions {
+    flex-direction: column;
   }
 
-  /* Remove visuais pesados que quebram layout nesses formatos */
-  .hero-visual,
-  .hero-grid,
-  .hero-glow-1,
-  .hero-glow-2 {
-    display: none !important;
-  }
-
-  /* Garante que nada vaze horizontal */
-  html, body {
-    overflow-x: hidden !important;
-  }
-}
-
-/* ============================= */
-/* 📱 FIX FINO – CELULARES GRANDES (iPhone Pro Max / Galaxy Ultra) */
-/* Centraliza texto e botões do HERO */
-/* ============================= */
-
-@media (max-width: 900px) and (orientation: portrait) {
-
-  /* Centraliza visualmente o bloco do texto */
-  #hero .hero-content {
-    text-align: center !important;
-    justify-items: center;
-  }
-
-  /* Centraliza título e subtítulo */
-  #hero .hero-title,
-  #hero .hero-sub {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  /* Centraliza os botões */
-  #hero .hero-actions {
-    justify-content: center !important;
+  .btn-primary,
+  .btn-ghost {
     width: 100%;
-  }
-
-  #hero .hero-actions > * {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  /* Evita "sensação" de desalinhado por padding do container */
-  #hero .container {
-    padding-left: 16px;
-    padding-right: 16px;
+    justify-content: center;
   }
 }
