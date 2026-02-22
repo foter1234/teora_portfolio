@@ -20,17 +20,6 @@
     overflow-x: hidden;
     cursor: none;
   }
-  @media (hover: none) and (pointer: coarse) {
-  body {
-    cursor: auto;
-  }
-
-  #cursor-dot,
-  #cursor-ring {
-    display: none;
-  }
-}
-
   ::selection { background: rgba(0,200,255,.25); color: var(--blue); }
   ::-webkit-scrollbar { width: 3px; }
   ::-webkit-scrollbar-track { background: var(--bg); }
@@ -79,11 +68,6 @@
 
   /* ─── UTILITIES ─── */
   .container { max-width: 1160px; margin: 0 auto; padding: 0 28px; position: relative; z-index: 1; }
-  @media (max-width: 480px) {
-  .container {
-    padding: 0 18px;
-  }
-}
   .badge {
     display: inline-flex; align-items: center; gap: 6px;
     background: rgba(0,200,255,.1); color: var(--blue);
@@ -242,16 +226,10 @@
     display: grid; grid-template-columns: 1fr 1fr; gap: 60px;
     align-items: center; padding: 100px 0 80px;
   }
- @media (max-width: 992px) {
-  .hero-content {
-    grid-template-columns: 1fr;
-    padding: 60px 0;
+  @media (max-width: 900px) {
+    .hero-content { grid-template-columns: 1fr; padding: 60px 0; }
+    .hero-visual { display: none; }
   }
-
-  .hero-visual {
-    display: none;
-  }
-}
   .hero-eyebrow { animation: fadeUp .6s ease forwards; }
   .hero-title {
     font-size: clamp(2.6rem, 5.5vw, 4.2rem);
@@ -305,7 +283,7 @@
   }
   @keyframes counter-spin { to { transform: translate(-50%,-50%) rotate(-360deg); } }
   @keyframes float { 0%,100% { transform: translate(-50%,-50%) translateY(0) rotate(0deg); } 50% { transform: translate(-50%,-50%) translateY(-10px) rotate(0deg); } }
-  .center-logo img { width: 680px; height: 680px; object-fit: contain; filter: drop-shadow(0 0 40px rgba(0,200,255,.5)); }
+  .center-logo img { width: 480px; height: 480px; object-fit: contain; filter: drop-shadow(0 0 40px rgba(0,200,255,.5)); }
   .floating-tag {
     position: absolute; background: rgba(12,17,32,.9);
     border: 1px solid var(--border); border-radius: 10px;
@@ -324,19 +302,6 @@
   .section-alt { background: var(--bg2); }
   .section-header { text-align: center; margin-bottom: 60px; }
   .section-header .section-sub { max-width: 480px; margin: 10px auto 0; }
-
-
-  img {
-  max-width: 100%;
-  height: auto;
-}
-
-.orbit-wrap,
-.center-logo img {
-  max-width: 100%;
-}
-
-
 
   /* ─── PLANS ─── */
   .plans-grid {
@@ -396,13 +361,6 @@
   .plan-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,200,255,.35); }
   .plan-btn svg { width: 15px; height: 15px; }
 
-  .plan-card::before {
-  pointer-events: none;
-}
-.plan-btn {
-  position: relative;
-  z-index: 2;
-}
   /* ─── PORTFOLIO ─── */
   .port-tabs {
     display: flex; gap: 8px; flex-wrap: wrap; justify-content: center;
@@ -560,148 +518,4 @@
     .hero-actions { justify-content: flex-start; }
   }
 
-  html, body {
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
-/* ─────────────────────────────────────────────
-   🔥 CORREÇÕES GERAIS MOBILE
-───────────────────────────────────────────── */
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-html, body {
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
-/* ─────────────────────────────────────────────
-   📱 TABLET E CELULAR GRANDE
-───────────────────────────────────────────── */
-
-@media (max-width: 992px) {
-
-  /* NAVBAR */
-  .nav-links {
-    display: none;
-  }
-
-  .hamburger {
-    display: block;
-  }
-
-  /* HERO */
-  .hero-content {
-    grid-template-columns: 1fr !important;
-    gap: 40px;
-    text-align: center;
-  }
-
-  .hero-actions {
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .hero-stats {
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  /* HERO VISUAL some no mobile */
-  .hero-visual {
-    display: none;
-  }
-
-  /* PLANOS */
-  .plans-grid {
-    grid-template-columns: 1fr !important;
-    gap: 24px;
-  }
-
-  /* PORTFÓLIO */
-  .port-grid {
-    grid-template-columns: 1fr !important;
-  }
-
-  /* EQUIPE */
-  .team-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-  }
-
-  /* FOOTER */
-  .footer-inner {
-    flex-direction: column;
-    gap: 24px;
-    text-align: center;
-  }
-
-}
-
-/* ─────────────────────────────────────────────
-   📱 CELULAR MÉDIO
-───────────────────────────────────────────── */
-
-@media (max-width: 768px) {
-
-  .container {
-    padding: 0 20px;
-  }
-
-  .hero-title {
-    font-size: clamp(2rem, 6vw, 2.6rem);
-    line-height: 1.2;
-  }
-
-  .hero-sub {
-    font-size: .95rem;
-  }
-
-  .section-title {
-    font-size: clamp(1.6rem, 5vw, 2rem);
-  }
-
-  .team-grid {
-    grid-template-columns: 1fr;
-  }
-
-}
-
-/* ─────────────────────────────────────────────
-   📱 CELULAR PEQUENO
-───────────────────────────────────────────── */
-
-@media (max-width: 480px) {
-
-  .container {
-    padding: 0 16px;
-  }
-
-  .hero-actions {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 12px;
-  }
-
-  .btn-primary,
-  .btn-ghost,
-  .plan-btn {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .hero-stats {
-    flex-direction: column;
-    gap: 14px;
-  }
-
-  .cta-title {
-    font-size: 1.6rem;
-    line-height: 1.25;
-  }
-
-}
+  
