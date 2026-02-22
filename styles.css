@@ -564,3 +564,144 @@
   max-width: 100%;
   overflow-x: hidden;
 }
+
+/* ─────────────────────────────────────────────
+   🔥 CORREÇÕES GERAIS MOBILE
+───────────────────────────────────────────── */
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* ─────────────────────────────────────────────
+   📱 TABLET E CELULAR GRANDE
+───────────────────────────────────────────── */
+
+@media (max-width: 992px) {
+
+  /* NAVBAR */
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  /* HERO */
+  .hero-content {
+    grid-template-columns: 1fr !important;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .hero-actions {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero-stats {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* HERO VISUAL some no mobile */
+  .hero-visual {
+    display: none;
+  }
+
+  /* PLANOS */
+  .plans-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px;
+  }
+
+  /* PORTFÓLIO */
+  .port-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* EQUIPE */
+  .team-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  /* FOOTER */
+  .footer-inner {
+    flex-direction: column;
+    gap: 24px;
+    text-align: center;
+  }
+
+}
+
+/* ─────────────────────────────────────────────
+   📱 CELULAR MÉDIO
+───────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 6vw, 2.6rem);
+    line-height: 1.2;
+  }
+
+  .hero-sub {
+    font-size: .95rem;
+  }
+
+  .section-title {
+    font-size: clamp(1.6rem, 5vw, 2rem);
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+/* ─────────────────────────────────────────────
+   📱 CELULAR PEQUENO
+───────────────────────────────────────────── */
+
+@media (max-width: 480px) {
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .btn-primary,
+  .btn-ghost,
+  .plan-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-stats {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .cta-title {
+    font-size: 1.6rem;
+    line-height: 1.25;
+  }
+
+}
