@@ -33,13 +33,16 @@
 
   /* ─── PORTFOLIO DATA ─── */
   const portfolioItems = [
-    { id: 1, title: 'Teora Agendamentos', category: 'Sistemas/Apps', tag: 'Sistema', desc: 'Prototipo de agendamentos para sua Barbearia ou salão', bg: 'linear-gradient(135deg,#060D1E,#0A1830)', accent: '#00C8FF', url: 'https://teor-agendamentos.vercel.app/', image: 'img/portfolio/img8.png' },
+    { id: 1, title: 'Danilo Lima Advogados ', category: 'Sites Institucionais', tag: 'Institucional', desc: 'Soluções jurídicas seguras para proteger seus direitos e sua família.', bg: 'linear-gradient(135deg,#061A10,#0A2818)', accent: '#f0862f', url: 'https://danilolimaadvogados.online/', image: 'img/portfolio/img13.png' },
     { id: 2, title: 'Inbracon', category: 'Landing Pages', tag: 'Landing', desc: 'Estruturas Inteligentes para Seu Negócio. Projete a colheita e ganhe espaço com engenharia Inbracon', bg: 'linear-gradient(135deg,#0D0A1E,#1A0F2E)', accent: '#8B5CF6', url: 'https://inbracon-site.vercel.app/', image: 'img/portfolio/img9.png' },
-    { id: 3, title: 'Danilo Lima Advogados ', category: 'Sites Institucionais', tag: 'Institucional', desc: 'Soluções jurídicas seguras para proteger seus direitos e sua família.', bg: 'linear-gradient(135deg,#061A10,#0A2818)', accent: '#10B981', url: 'https://prototipo-danilo-lima.netlify.app/', image: 'img/portfolio/img7.png' },
-    { id: 4, title: 'Zorraq', category: 'E-commerce', tag: 'E-commerce', desc: 'Loja completa com 20+ produtos', bg: 'linear-gradient(135deg,#1A0E05,#2A1808)', accent: '#F59E0B', url: 'https://zorraq.com/', image: 'img/portfolio/img12.png' },
+    { id: 3, title: 'Zorraq', category: 'E-commerce', tag: 'E-commerce', desc: 'Loja completa com 20+ produtos', bg: 'linear-gradient(135deg,#1A0E05,#2A1808)', accent: '#F59E0B', url: 'https://zorraq.com/', image: 'img/portfolio/img12.png' },
+    { id: 4, title: 'Solar Tech', category: 'Landing Pages', tag: 'Landing', desc: ' Pare de pagar pela energia. Gere a sua.', bg: 'linear-gradient(135deg,#12100A,#1C180E)', accent: '#D4AF37', url: 'https://site-institucional-solar-tech.vercel.app/', image: 'img/portfolio/img11.png' },
     { id: 5, title: 'Crianças Felizes', category: 'Landing Pages', tag: 'Landing', desc: 'Transformando o futuro das crianças através do amor e da educação', bg: 'linear-gradient(135deg,#1A0508,#280A0C)', accent: '#EF4444', url: 'https://associacaocriancasfelizes.netlify.app/', image: 'img/portfolio/img10.png' },
-    { id: 6, title: 'Solar Tech', category: 'Landing Pages', tag: 'Landing', desc: ' Pare de pagar pela energia. Gere a sua.', bg: 'linear-gradient(135deg,#12100A,#1C180E)', accent: '#D4AF37', url: 'https://energia-solar-exp.netlify.app', image: 'img/portfolio/img11.png' },
-    { id: 7, title: 'Gmartins Refrigeração', category: 'E-commerce', tag: 'E-commerce', desc: 'Agendamentos + loja virtual integrados', bg: 'linear-gradient(135deg,#061612,#0A201C)', accent: '#10B981', url: 'https://gmartinsrefrigeracao.netlify.app', image: 'img/portfolio/img6.png' },
+    { id: 6, title: 'Teora Agendamentos', category: 'Sistemas/Apps', tag: 'Sistema', desc: 'Prototipo de agendamentos para sua Barbearia ou salão', bg: 'linear-gradient(135deg,#060D1E,#0A1830)', accent: '#00C8FF', url: 'https://teor-agendamentos.vercel.app/', image: 'img/portfolio/img8.png' },
+    { id: 7, title: 'Danilo Lima Advogados ', category: 'Sites Institucionais', tag: 'Institucional', desc: 'Soluções jurídicas seguras para proteger seus direitos e sua família.', bg: 'linear-gradient(135deg,#061A10,#0A2818)', accent: '#10B981', url: 'https://danilolimaadvogados.online/', image: 'img/portfolio/img7.png' },
+    { id: 8, title: 'Gmartins Refrigeração', category: 'E-commerce', tag: 'E-commerce', desc: 'Agendamentos + loja virtual integrados', bg: 'linear-gradient(135deg,#061612,#0A201C)', accent: '#10B981', url: 'https://gmartinsrefrigeracao.netlify.app', image: 'img/portfolio/img6.png' },
+    { id: 9, title: 'Danilo Lima Advogados ', category: 'Sites Institucionais', tag: 'Institucional', desc: 'Soluções jurídicas seguras para proteger seus direitos e sua família.', bg: 'linear-gradient(135deg,#061A10,#0A2818)', accent: '#e28801', url: 'https://site-advogado-kappa.vercel.app/', image: 'img/portfolio/img14.png' }
+  
   ];
 
 function buildCard(item) {
