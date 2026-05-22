@@ -33,16 +33,22 @@
 
   /* ─── PORTFOLIO DATA ─── */
   const portfolioItems = [
-    { id: 1, title: 'Danilo Lima Advogados ', category: 'Sites Institucionais', tag: 'Institucional', desc: 'Soluções jurídicas seguras para proteger seus direitos e sua família.', bg: 'linear-gradient(135deg,#061A10,#0A2818)', accent: '#f0862f', url: 'https://danilolimaadvogados.online/', image: 'img/portfolio/img13.png' },
-    { id: 2, title: 'Inbracon', category: 'Landing Pages', tag: 'Landing', desc: 'Estruturas Inteligentes para Seu Negócio. Projete a colheita e ganhe espaço com engenharia Inbracon', bg: 'linear-gradient(135deg,#0D0A1E,#1A0F2E)', accent: '#8B5CF6', url: 'https://inbracon-site.vercel.app/', image: 'img/portfolio/img9.png' },
-    { id: 3, title: 'Zorraq', category: 'E-commerce', tag: 'E-commerce', desc: 'Loja completa com 20+ produtos', bg: 'linear-gradient(135deg,#1A0E05,#2A1808)', accent: '#F59E0B', url: 'https://zorraq.com/', image: 'img/portfolio/img12.png' },
-    { id: 4, title: 'Solar Tech', category: 'Landing Pages', tag: 'Landing', desc: ' Pare de pagar pela energia. Gere a sua.', bg: 'linear-gradient(135deg,#12100A,#1C180E)', accent: '#D4AF37', url: 'https://site-institucional-solar-tech.vercel.app/', image: 'img/portfolio/img11.png' },
-    { id: 5, title: 'Crianças Felizes', category: 'Landing Pages', tag: 'Landing', desc: 'Transformando o futuro das crianças através do amor e da educação', bg: 'linear-gradient(135deg,#1A0508,#280A0C)', accent: '#EF4444', url: 'https://associacaocriancasfelizes.netlify.app/', image: 'img/portfolio/img10.png' },
-    { id: 6, title: 'Teora Agendamentos', category: 'Sistemas/Apps', tag: 'Sistema', desc: 'Prototipo de agendamentos para sua Barbearia ou salão', bg: 'linear-gradient(135deg,#060D1E,#0A1830)', accent: '#00C8FF', url: 'https://teor-agendamentos.vercel.app/', image: 'img/portfolio/img8.png' },
-    { id: 7, title: 'Danilo Lima Advogados ', category: 'Sites Institucionais', tag: 'Institucional', desc: 'Soluções jurídicas seguras para proteger seus direitos e sua família.', bg: 'linear-gradient(135deg,#061A10,#0A2818)', accent: '#10B981', url: 'https://danilolimaadvogados.online/', image: 'img/portfolio/img7.png' },
-    { id: 8, title: 'Gmartins Refrigeração', category: 'E-commerce', tag: 'E-commerce', desc: 'Agendamentos + loja virtual integrados', bg: 'linear-gradient(135deg,#061612,#0A201C)', accent: '#10B981', url: 'https://gmartinsrefrigeracao.netlify.app', image: 'img/portfolio/img6.png' },
-    { id: 9, title: 'Danilo Lima Advogados ', category: 'Sites Institucionais', tag: 'Institucional', desc: 'Soluções jurídicas seguras para proteger seus direitos e sua família.', bg: 'linear-gradient(135deg,#061A10,#0A2818)', accent: '#e28801', url: 'https://site-advogado-kappa.vercel.app/', image: 'img/portfolio/img14.png' }
-  
+    { id: 1, title: 'Solar Tech', category: 'Sites Institucionais', tag: 'Institucional', desc: ' Pare de pagar pela energia. Gere a sua.', bg: 'linear-gradient(135deg,#12100A,#1C180E)', accent: '#D4AF37', url: 'https://site-institucional-solar-tech.vercel.app/', image: 'img/portfolio/img11.png' },
+    { id: 2, title: 'Crianças Felizes', category: 'Landing Pages', tag: 'Landing', desc: 'Transformando o futuro das crianças através do amor e da educação', bg: 'linear-gradient(135deg,#1A0508,#280A0C)', accent: '#EF4444', url: 'https://associacaocriancasfelizes.netlify.app/', image: 'img/portfolio/img10.png' },
+    { id: 3, title: 'Danilo Lima Advogados ', category: 'Sites Institucionais', tag: 'Institucional', desc: 'Soluções jurídicas seguras para proteger seus direitos e sua família.', bg: 'linear-gradient(135deg,#061A10,#0A2818)', accent: '#e28801', url: 'https://site-advogado-kappa.vercel.app/', image: 'img/portfolio/img14.png' },
+    { id: 4, title: 'Renova Clinica Odontologica', category: 'Landing Pages', tag: 'Landing', desc: 'Landing page para clinica odontologica com foco em conversao e agendamento.', bg: 'linear-gradient(135deg,#07141A,#0B2630)', accent: '#22D3EE', url: 'https://renovaclinicaodontologica.com', image: 'https://res.cloudinary.com/dg9cpkold/image/upload/v1779391500/imagem_2026-05-21_152457149_p0cyvx.png' },
+    { id: 5, title: 'Advogadas da Saude', category: 'Landing Pages', tag: 'Landing', desc: 'Landing page de advocacia com foco em autoridade e captacao de clientes.', bg: 'linear-gradient(135deg,#160C08,#2B1810)', accent: '#F97316', url: 'https://advogadas-da-saude.vercel.app/', image: 'https://res.cloudinary.com/dg9cpkold/image/upload/v1779391427/imagem_2026-05-21_152342485_hku4lr.png' },
+    { id: 6, title: 'Descubra Seu Precatorio', category: 'Landing Pages', tag: 'Landing', desc: 'Analise especializada do seu precatorio com seguranca e transparencia.', bg: 'linear-gradient(135deg,#0C1024,#1A2148)', accent: '#60A5FA', url: 'https://descubraseuprecatorio.com/', image: 'https://res.cloudinary.com/dg9cpkold/image/upload/v1779391883/imagem_2026-05-21_153118454_tktcmx.png' },
+    { id: 7, title: 'Almeida e Milani', category: 'Landing Pages', tag: 'Landing', desc: 'Advocacia especializada no direito trabalhista.', bg: 'linear-gradient(135deg,#1A100A,#2E1B12)', accent: '#FB923C', url: 'https://almeidaemilani.com', image: 'https://res.cloudinary.com/dg9cpkold/image/upload/v1779391983/imagem_2026-05-21_153259559_islmxb.png' },
+    { id: 8, title: 'Maicon Ambrosim', category: 'Landing Pages', tag: 'Landing', desc: 'Advocacia, assessoria e consultoria juridica.', bg: 'linear-gradient(135deg,#0F111B,#1F263A)', accent: '#38BDF8', url: 'https://site-maicon-ambrosim.vercel.app', image: 'https://res.cloudinary.com/dg9cpkold/image/upload/v1779392193/imagem_2026-05-21_153630433_stflhz.png' },
+    { id: 9, title: 'Wekson Lima Agro', category: 'Landing Pages', tag: 'Landing', desc: 'Advogado especializado em dividas do produtor rural.', bg: 'linear-gradient(135deg,#13210F,#25421E)', accent: '#84CC16', url: 'https://site-wekson-lima-agro.vercel.app', image: 'https://res.cloudinary.com/dg9cpkold/image/upload/v1779392986/imagem_2026-05-21_154942589_itozms.png' },
+    { id: 10, title: 'Inbracon', category: 'Landing Pages', tag: 'Landing', desc: 'Estruturas Inteligentes para Seu Negócio. Projete a colheita e ganhe espaço com engenharia Inbracon', bg: 'linear-gradient(135deg,#0D0A1E,#1A0F2E)', accent: '#8B5CF6', url: 'https://inbracon.com', image: 'img/portfolio/img9.png' },
+    { id: 11, title: 'Teora Agendamentos', category: 'Sistemas/Apps', tag: 'Sistema', desc: 'Prototipo de agendamentos para sua Barbearia ou salão', bg: 'linear-gradient(135deg,#060D1E,#0A1830)', accent: '#00C8FF', url: 'https://teor-agendamentos.vercel.app/', image: 'img/portfolio/img8.png' },
+    { id: 12, title: 'Gmartins Refrigeração', category: 'E-commerce', tag: 'E-commerce', desc: 'Agendamentos + loja virtual integrados', bg: 'linear-gradient(135deg,#061612,#0A201C)', accent: '#10B981', url: 'https://gmartinsrefrigeracao.netlify.app', image: 'img/portfolio/img6.png' },
+    { id: 13, title: 'lawyer J.S', category: 'Landing Pages', tag: 'Landing', desc: 'Landing page para servicos juridicos de advocacia internacional.', bg: 'linear-gradient(135deg,#111827,#1F3A5F)', accent: '#60A5FA', url: 'https://j-smith-esq-site.vercel.app', image: 'https://res.cloudinary.com/dg9cpkold/image/upload/v1779392922/imagem_2026-05-21_154837164_hbfn3h.png' },
+    { id: 14, title: '36° Corrida do Trabalhador', category: 'Sistemas/Apps', tag: 'Sistema', desc: 'Jogo da memoria interativo da 36 Corrida do Trabalhador.', bg: 'linear-gradient(135deg,#0A1020,#1A2B55)', accent: '#22C55E', url: 'https://corridadotrabalhador.vercel.app/', image: 'https://res.cloudinary.com/dg9cpkold/image/upload/v1779392405/imagem_2026-05-21_154001727_nzof25.png' },
+    { id: 15, title: 'Estetica Premium (EXP)', category: 'Landing Pages', tag: 'Landing', desc: 'Landing page de estetica com foco em autoridade e conversao.', bg: 'linear-gradient(135deg,#20101A,#3A1E31)', accent: '#F472B6', url: 'https://site-exemplo-estetico.netlify.app', image: 'https://res.cloudinary.com/dg9cpkold/image/upload/v1779393804/imagem_2026-05-21_160319201_ps5yn1.png' }
+    
   ];
 
 function buildCard(item) {
@@ -75,9 +81,25 @@ function buildCard(item) {
   `;
 }
 
+  const INITIAL_PORTFOLIO_VISIBLE = 6;
+  let currentPortfolioFilter = 'Todos';
+  let visiblePortfolioCount = INITIAL_PORTFOLIO_VISIBLE;
+
+  function getFilteredPortfolioItems(filter) {
+    return filter === 'Todos' ? portfolioItems : portfolioItems.filter(i => i.category === filter);
+  }
+
+  function updateShowMoreButton(totalItems) {
+    const showMoreBtn = document.getElementById('portfolio-show-more');
+    if (!showMoreBtn) return;
+    const hasMore = visiblePortfolioCount < totalItems;
+    showMoreBtn.style.display = hasMore ? 'inline-flex' : 'none';
+  }
+
   function renderPortfolio(filter) {
     const grid = document.getElementById('port-grid');
-    const items = filter === 'Todos' ? portfolioItems : portfolioItems.filter(i => i.category === filter);
+    const filteredItems = getFilteredPortfolioItems(filter);
+    const items = filteredItems.slice(0, visiblePortfolioCount);
     grid.style.opacity = '0';
     grid.style.transform = 'translateY(16px)';
     setTimeout(() => {
@@ -92,14 +114,27 @@ function buildCard(item) {
         el.addEventListener('mouseenter', () => { ring.style.width = '56px'; ring.style.height = '56px'; ring.style.opacity = '.5'; });
         el.addEventListener('mouseleave', () => { ring.style.width = '36px'; ring.style.height = '36px'; ring.style.opacity = '1'; });
       });
+      updateShowMoreButton(filteredItems.length);
     }, 200);
+  }
+
+  function showMorePortfolio() {
+    visiblePortfolioCount = getFilteredPortfolioItems(currentPortfolioFilter).length;
+    renderPortfolio(currentPortfolioFilter);
   }
 
   function filterPortfolio(cat, btn) {
     document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
+    currentPortfolioFilter = cat;
+    visiblePortfolioCount = INITIAL_PORTFOLIO_VISIBLE;
     renderPortfolio(cat);
   }
 
+  const showMoreBtn = document.getElementById('portfolio-show-more');
+  if (showMoreBtn) {
+    showMoreBtn.addEventListener('click', showMorePortfolio);
+  }
+
   // initial render
-  renderPortfolio('Todos');
+  renderPortfolio(currentPortfolioFilter);

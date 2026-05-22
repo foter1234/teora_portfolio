@@ -423,6 +423,15 @@
   }
   .port-card:hover .port-hover-arrow { opacity: 1; transform: translateY(0); }
   .port-hover-arrow svg { width: 16px; height: 16px; color: #fff; }
+  .port-more-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 26px;
+  }
+  .port-more-btn {
+    min-width: 130px;
+    justify-content: center;
+  }
 
   /* ─── TEAM ─── */
   .team-grid {
