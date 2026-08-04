@@ -103,13 +103,13 @@
   .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(0,200,255,.4); }
   .btn-ghost {
     display: inline-flex; align-items: center; gap: 8px;
-    background: transparent; color: var(--muted);
-    font-size: .9rem; font-weight: 500;
+    background: rgba(0,200,255,.06); color: var(--text);
+    font-size: .9rem; font-weight: 600;
     padding: 14px 24px; border-radius: 10px;
-    border: 1px solid var(--border); cursor: pointer;
+    border: 1px solid rgba(0,200,255,.35); cursor: pointer;
     transition: all .25s; text-decoration: none;
   }
-  .btn-ghost:hover { border-color: rgba(0,200,255,.3); color: var(--text); background: var(--blue-dim); }
+  .btn-ghost:hover { border-color: rgba(0,200,255,.7); color: var(--white); background: rgba(0,200,255,.14); }
   .btn-icon { width: 18px; height: 18px; }
 
   /* ─── NAVBAR ─── */
