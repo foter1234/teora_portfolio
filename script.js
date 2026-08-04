@@ -25,6 +25,32 @@
   }
   document.querySelectorAll('#mobile-menu a').forEach(a => a.addEventListener('click', () => document.getElementById('mobile-menu').classList.remove('open')));
 
+  /* ─── INTERRUPTOR DE TEMA ─── */
+  (function () {
+    const THEME_KEY = 'teora-theme';
+    const root = document.documentElement;
+    const toggle = document.getElementById('theme-toggle');
+    if (!toggle) return;
+
+    function isLight() { return root.getAttribute('data-theme') === 'light'; }
+    function syncLabel() {
+      const light = isLight();
+      toggle.setAttribute('aria-pressed', String(light));
+      toggle.setAttribute('aria-label', light ? 'Ativar tema escuro' : 'Ativar tema claro');
+    }
+    toggle.addEventListener('click', () => {
+      if (isLight()) {
+        root.removeAttribute('data-theme');
+        localStorage.setItem(THEME_KEY, 'dark');
+      } else {
+        root.setAttribute('data-theme', 'light');
+        localStorage.setItem(THEME_KEY, 'light');
+      }
+      syncLabel();
+    });
+    syncLabel();
+  })();
+
   /* ─── SCROLL REVEAL ─── */
   const observer = new IntersectionObserver(entries => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
@@ -54,7 +80,7 @@
 function buildCard(item) {
   return `
     <div class="port-card reveal" data-cat="${item.category}" style="animation:fadeUp .45s ease both;">
-      <div class="port-inner" style="background:${item.bg};">
+      <a class="port-inner" href="${item.url}" target="_blank" rel="noopener" aria-label="Abrir projeto ${item.title}" style="background:${item.bg};">
 
         <div class="port-bg" style="background-image: url('${item.image}')"></div>
         
@@ -71,12 +97,12 @@ function buildCard(item) {
         <div class="port-deco" style="width:120px;height:120px;background:radial-gradient(circle,${item.accent}22,transparent 70%);top:-20px;right:-20px;"></div>
         <div class="port-deco" style="width:60px;height:60px;border:1px solid ${item.accent}22;bottom:40px;right:60px;"></div>
 
-        <a href="${item.url}" target="_blank" rel="noopener" class="port-hover-arrow" aria-label="Abrir projeto ${item.title}">
+        <span class="port-hover-arrow" aria-hidden="true">
           <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
             <path d="M7 17L17 7M17 7H7M17 7v10"/>
           </svg>
-        </a>
-      </div>
+        </span>
+      </a>
     </div>
   `;
 }
@@ -92,8 +118,13 @@ function buildCard(item) {
   function updateShowMoreButton(totalItems) {
     const showMoreBtn = document.getElementById('portfolio-show-more');
     if (!showMoreBtn) return;
-    const hasMore = visiblePortfolioCount < totalItems;
-    showMoreBtn.style.display = hasMore ? 'inline-flex' : 'none';
+    if (totalItems <= INITIAL_PORTFOLIO_VISIBLE) {
+      showMoreBtn.style.display = 'none';
+      return;
+    }
+    showMoreBtn.style.display = 'inline-flex';
+    const isExpanded = visiblePortfolioCount >= totalItems;
+    showMoreBtn.textContent = isExpanded ? 'Ver menos' : 'Ver mais';
   }
 
   function renderPortfolio(filter) {
@@ -118,9 +149,14 @@ function buildCard(item) {
     }, 200);
   }
 
-  function showMorePortfolio() {
-    visiblePortfolioCount = getFilteredPortfolioItems(currentPortfolioFilter).length;
+  function togglePortfolioVisibility() {
+    const totalItems = getFilteredPortfolioItems(currentPortfolioFilter).length;
+    const isExpanded = visiblePortfolioCount >= totalItems;
+    visiblePortfolioCount = isExpanded ? INITIAL_PORTFOLIO_VISIBLE : totalItems;
     renderPortfolio(currentPortfolioFilter);
+    if (isExpanded) {
+      document.getElementById('portfolio-show-more').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
   }
 
   function filterPortfolio(cat, btn) {
@@ -133,7 +169,7 @@ function buildCard(item) {
 
   const showMoreBtn = document.getElementById('portfolio-show-more');
   if (showMoreBtn) {
-    showMoreBtn.addEventListener('click', showMorePortfolio);
+    showMoreBtn.addEventListener('click', togglePortfolioVisibility);
   }
 
   // initial render
