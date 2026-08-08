@@ -1,0 +1,9 @@
+# Mídia bruta que não vai para o site.
+# O vídeo original da escolinha tem 189 MB (1440x2560 @60fps) e passa do
+# limite de 100 MB por arquivo do GitHub. A página usa a versão comprimida
+# escolinha-video.mp4 (18 MB), essa sim versionada.
+escolinha_futebol/Video - Pj - Escolinha-CERTO.mp4
+
+# lixo de sistema
+.DS_Store
+Thumbs.db
